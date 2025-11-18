@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Poon Portfolio</title>
+    <meta name="description" content="Ryan Poon - HKUST Technology and Management Dual Degree student. Councillor at Sham Shui Po District Outstanding Student Association. Engineering and leadership portfolio.">
+    <meta name="keywords" content="Ryan Poon, HKUST, Engineering, Leadership, SSPDOSA, Tsung Tsin Christian Academy">
+    <meta name="author" content="Ryan Poon">
+    
+    <!-- Open Graph tags for social media -->
+    <meta property="og:title" content="Ryan Poon - Engineering & Leadership Portfolio">
+    <meta property="og:description" content="HKUST T&M DDP Scholar | Councillor at SSPDOSA">
+    <meta property="og:type" content="website">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: white;
+            padding: 80px 0;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .profile-img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .bio {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        /* Contact & Current Info Section */
+        .contact-current {
+            background-color: #f1f8ff;
+        }
+        
+        .contact-current-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info, .current-info {
+            flex: 1;
+        }
+        
+        .contact-info h3, .current-info h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .role-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .organization {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .duration {
+            color: #7f8c8d;
+        }
+        
+        /* Projects & Education Sections */
+        .project-item, .education-item, .award-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .contact-details {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-details a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-details a:hover {
+            color: #3498db;
+        }
+        
+        .copyright {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content, .contact-current-content {
+                flex-direction: column;
+            }
+            
+            .profile-img {
+                width: 250px;
+                height: 333px;
+                align-self: center;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Ryan Poon</div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact-current">Current</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Photo and Bio -->
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-img-container">
+                    <!-- Replace "ryan-photo.jpg" with your actual image file name -->
+                    <img src="https://i.ibb.co/39VRTtXk/IMG-20251107-000133.jpg" alt="Ryan Poon" class="profile-img">
+                </div>
+                <div class="hero-text">
+                    <h1>Ryan Poon</h1>
+                    <div class="subtitle">HKUST T&M DDP Scholar | Engineering & Leadership</div>
+                    <div class="bio">
+                        <p>A dedicated student at HKUST's Technology and Management Dual Degree Program, focused on applying analytical thinking and organized leadership to solve complex challenges.</p>
+                        <p>Committed to community service through various leadership roles in student organizations, with experience in strategic planning, event coordination, and team management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Current Duty/Study Section -->
+    <section class="contact-current" id="contact-current">
+        <div class="container">
+            <div class="contact-current-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li>Email: ryrypoon@gmail.com</li>
+                        <li>Phone: +852 9087 0079</li>
+                        <li>LinkedIn: linkedin.com/in/ryan-poon-030338386</li>
+                    </ul>
+                </div>
+                <div class="current-info">
+                    <h3>Current Roles & Study</h3>
+                    <ul>
+                        <li>Councillor - Sham Shui Po District Outstanding Student Association</li>
+                        <li>Student - HKUST Technology and Management Dual Degree Program</li>
+                        <li>Student Ambassador - AIS HKUST</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Leadership Experience</h2>
+            
+            <div class="experience-item">
+                <div class="role-title">
+                    <span class="organization">Sham Shui Po District Outstanding Student Association</span>
+                    <span class="duration">2025-2027</span>
+                </div>
+                <div class="role">Councillor</div>
+                <ul>
+                    <li>Providing guidance and oversight on organizational strategy and event planning</li>
+                    <li>Monitoring operations to ensure alignment with the association's mission and objectives</li>
+                    <li>Advising the Executive Committee on activity planning and organizational development</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="role-title">
+                    <span class="organization">Sham Shui Po District Outstanding Student Association</span>
+                    <span class="duration">2023-2025</span>
+                </div>
+                <div class="role">Social Secretary, Executive Committee</div>
+                <ul>
+                    <li>Led the planning and execution of multiple overnight camps and annual award ceremonies</li>
+                    <li>Coordinated with various community organizations to deliver meaningful student programs</li>
+                    <li>Managed event logistics and participant engagement for district-wide initiatives</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="role-title">
+                    <span class="organization">Tsung Tsin Christian Academy - Student Fellowship</span>
+                    <span class="duration">2023-2024</span>
+                </div>
+                <div class="role">Chairperson</div>
+                <ul>
+                    <li>Directed weekly fellowship programs and organized biannual life camps for student development</li>
+                    <li>Managed a team to plan and execute gospel festivals and community outreach events</li>
+                    <li>Proposed and developed a student leadership training initiative</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="role-title">
+                    <span class="organization">Tsung Tsin Christian Academy - Student Fellowship</span>
+                    <span class="duration">2022-2023</span>
+                </div>
+                <div class="role">Vice Chairperson</div>
+                <ul>
+                    <li>Assisted in organizing weekly fellowship activities and special events</li>
+                    <li>Supported the chairperson in team management and program planning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Achievements Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects & Achievements</h2>
+            
+            <div class="project-item">
+                <h3>Student Fellowship Leadership</h3>
+                <ul>
+                    <li>Directed student development programs and community initiatives at TTCA</li>
+                    <li>Managed team operations for weekly activities and special events</li>
+                    <li>Organized biannual life camps focusing on student growth and development</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <h3>District Student Association Service</h3>
+                <ul>
+                    <li>Organized community camps and student recognition events for SSPDOSA</li>
+                    <li>Coordinated inter-organizational collaborations for district programs</li>
+                    <li>Managed program logistics for multiple large-scale student initiatives</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <h3>Academic Recognition</h3>
+                <ul>
+                    <li>Tsung Tsin Mission Outstanding Student Award 2025 (Senior)</li>
+                    <li>Sir Edward Youde Memorial Prize 2025</li>
+                    <li>Sham Shui Po District Outstanding Students' Election - Commendable Student (2023)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Awards Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education & Awards</h2>
+            
+            <div class="education-item">
+                <h3>The Hong Kong University of Science and Technology</h3>
+                <div class="duration">2025-2030 (Expected)</div>
+                <p>Technology and Management Dual Degree Program (T&M DDP)</p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Tsung Tsin Christian Academy</h3>
+                <div class="duration">2019-2025</div>
+                <p>International Advanced Level (IAL)</p>
+                <p>A* in Physics, Chemistry, Mathematics, Further Mathematics (Self-study)</p>
+            </div>
+            
+            <div class="award-item">
+                <h3>Honors & Awards</h3>
+                <ul>
+                    <li>Sir Edward Youde Memorial Prize (2025)</li>
+                    <li>Tsung Tsin Mission Outstanding Student (Senior Section) 2025</li>
+                    <li>Sham Shui Po District Outstanding Students' Election - Commendable Student (2023)</li>
+                    <li>Gold & Silver Award - The HKFYG "Easy Volunteer" (2022, 2023)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Contact Information -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact me</h3>
+                <div class="contact-details">
+                    <a href="mailto:ryrypoon@gmail.com">ryrypoon@gmail.com</a>
+                    <a href="tel:+85290870079">+852 9087 0079</a>
+                    <a href="https://linkedin.com/in/ryan-poon-030338386">LinkedIn</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2024 Ryan Poon. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
